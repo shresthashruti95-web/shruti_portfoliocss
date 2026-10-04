@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 20px;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: "Times New Roman", Times, serif;
+    border: 2px solid #000;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: "Times New Roman", Times, serif;
+    color: #222;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+/* Paragraphs */
+p {
+    color: #555;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    padding: 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header p {
+    margin-top: 0;
+}
+
+/* Navigation */
+nav {
+    margin-top: 25px;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #222;
+    background-color: #eee;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+nav a:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Main content */
+main {
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* Section lines */
+hr {
+    display: block;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px -30px;
+}
+
+/* About section */
+#about {
+    padding: 20px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Image on the left */
+.about-image {
+    flex: 0 0 180px;
+    order: 1;
+}
+
+.about-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* About text on the right */
+.about-text {
+    flex: 1;
+    order: 2;
+}
+
+/* Skills */
+#skills {
+    padding: 20px 0;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 15px 25px;
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+dd {
+    margin: 0;
+    line-height: 1.5;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Projects */
+#projects {
+    padding: 20px 0;
+}
+
+article {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+article a {
+    color: #222;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+article a:hover {
+    text-decoration: none;
+}
+
+/* Contact */
+#contact {
+    padding: 20px 0;
+}
+
+form {
+    max-width: 600px;
+}
+
+label {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+input,textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #222;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    padding: 25px 30px;
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: #222;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .about-content {
+        gap: 20px;
+    }
+
+    .about-image {
+        flex: 0 0 160px;
+    }
+
+    .about-image img {
+        width: 160px;
+        height: 160px;
+    }
+
+    dl {
+        grid-template-columns: 150px 1fr;
+    }
+
+    hr {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+
+    body {
+        margin: 10px;
+    }
+
+    header,
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Stack image and text on phone */
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        flex: none;
+        order: 1;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-image img {
+        width: 140px;
+        height: 140px;
+    }
+
+    dl {
+        display: block;
+    }
+
+    dt {
+        margin-top: 15px;
+    }
+
+    dd {
+        margin-bottom: 15px;
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    hr {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
